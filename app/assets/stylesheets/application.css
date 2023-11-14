@@ -13,3 +13,83 @@
  *= require_tree .
  *= require_self
  */
+ @import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+ .container{
+  background-color: white;
+ }
+
+p {
+  font-size: 800;
+}
+
+.input {
+  border-width: 0px !important;
+}
+
+.input_field{
+  margin: 30px;
+  border: 1px solid;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: rgb(231, 92, 145);
+  border-radius: 20px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 10px;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  touch-action: manipulation;
+  width: 700px;
+  letter-spacing: 2px;
+}
+
+.bnt:hover, .bnt:focus {
+  background-color: #F082AC;
+}
+
+.text-in-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.task-header {
+  text-decoration: none;
+  font-size: 300;
+  color: black;
+}
+
+.header-input{
+  margin: 10px;
+}
+.box-task {
+  border: 1px solid rgb(169, 168, 168);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 10px;
+  width: 700px;
+  background-color: rgb(247, 241, 241);
+}
+
+h1 {
+  margin: 10px;
+  letter-spacing: 2px;
+}

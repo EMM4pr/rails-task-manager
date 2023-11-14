@@ -1,9 +1,8 @@
 <%= form_with model: task do |f| %>
-  <%= f.label "Task Title" %>
-  <%= f.text_field :title, placeholder: "Enter your Task" %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.number_field :completed %>
+  <%= f.label "Task Title", class:"header-input" %>
+  <p class="input_field"><%= f.text_field :title, placeholder: "Enter the task title", style: "border-width: 0 !important;" %></p>
+
+  <%= f.label :details, class:"header-input" %>
+  <p class="input_field"><%= f.text_field :details, placeholder: "Enter your notes", style: "border-width: 0 !important;" %></p>
   <%= f.submit %>
 <% end %>

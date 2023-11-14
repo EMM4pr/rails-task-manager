@@ -1,13 +1,23 @@
-<h1>My Tasks</h1>
+<div class="container">
+  <h1>My Tasks</h1>
 
-<% @tasks.each do |task| %>
+  <% @tasks.each do |task| %>
+    <div class="box-task">
+      <h3>
+        <%= render "checkbox", task: @task %>
+        <%= link_to task.title, task_path(task), class:"task-header" %> •
+        <%= link_to "🗑️",
+          root_path(task),
+          data: {turbo_method: :delete, turbo_confirm: "Delete this task?"}, class:"task-header" %>
+      </h3>
 
-  <h3><%= link_to task.title, task_path(task) %></h3>
+      <p> <%= task.details %> </p>
+    </div>
+  <% end %>
 
-  <p>->(<%= task.details %>)</p>
-  <p>
-    <%= render "checkbox", task: @task %>
-  </p>
-<% end %>
 
-<button <%= link_to "Go Back", tasks_path %> ></button>
+  <div>
+    <hr class="hr hr-blurry" />
+    <button class="btn btn-primary"> <%= link_to "+ Add new Task", tasks_new_path, class: "text-in-btn" %> </button>
+  </div>
+</div>

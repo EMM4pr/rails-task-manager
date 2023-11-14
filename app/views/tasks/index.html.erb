@@ -1,0 +1,13 @@
+<h1>My Tasks</h1>
+
+<% @tasks.each do |task| %>
+
+  <h3><%= link_to task.title, task_path(task) %></h3>
+
+  <p>->(<%= task.details %>)</p>
+  <p>
+    <%= render "checkbox", task: @task %>
+  </p>
+<% end %>
+
+<button <%= link_to "Go Back", tasks_path %> ></button>
